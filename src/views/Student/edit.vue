@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     getStudentData(studentId){
-      axios.get(`http://127.0.0.1:8777/api/students/${studentId}/edit`).then(res =>{
+      axios.get(`https://laravel.cod6e.com/api/students/${studentId}/edit`).then(res =>{
          // this.model.student.name = res.data.student.name
          // this.model.student.course = res.data.student.course
          // this.model.student.email = res.data.student.email
@@ -81,7 +81,7 @@ export default {
     },
     UpdateStudent(){
       var MyThis = this;
-      axios.put(`http://127.0.0.1:8777/api/students/${this.studentId}/edit`,this.model.student).then(res =>{
+      axios.put(`https://laravel.cod6e.com/api/students/${this.studentId}/edit`,this.model.student).then(res =>{
         console.log(res);
         alert(res.data.message);
         this.model.student = {

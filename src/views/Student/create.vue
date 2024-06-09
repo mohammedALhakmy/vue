@@ -60,7 +60,7 @@ export default {
   methods: {
     saveStudent(){
       var MyThis = this;
-      axios.post('http://127.0.0.1:8777/api/students',this.model.student).then(res =>{
+      axios.post('https://laravel.cod6e.com/api/students',this.model.student).then(res =>{
         console.log(res);
         alert(res.data.message);
         this.model.student = {

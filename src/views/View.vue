@@ -75,7 +75,7 @@ export default {
       this.loading = true;
       this.students = [];
       try {
-        const response = await axios.get('http://127.0.0.1:8777/api/students');
+        const response = await axios.get('https://laravel.cod6e.com/api/students');
         const responseData = response.data;
         this.students = responseData.student; // Assign new data directly
       } catch (error) {
@@ -85,7 +85,7 @@ export default {
     },
     deleteStudent(studentId) {
       if (confirm("Are you sure you want to delete this data?")) {
-        axios.delete(`http://127.0.0.1:8777/api/students/${studentId}/delete`)
+        axios.delete(`https://laravel.cod6e.com/api/students/${studentId}/delete`)
             .then(res => {
               alert(res.data.message);
               this.getStudents(); // Fetch the updated list after deletion
