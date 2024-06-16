@@ -56,6 +56,7 @@ export default {
       },
       errorList: []
     }
+
   },
   methods: {
     saveStudent(){
